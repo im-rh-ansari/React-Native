@@ -14,7 +14,7 @@ class Menu extends Component {
 
     static navigationOptions = {
         title: 'Menu'
-    }
+    };
 
     render() {
 
