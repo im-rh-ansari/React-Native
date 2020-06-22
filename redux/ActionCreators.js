@@ -72,7 +72,7 @@ export const addDishes = (dishes) => ({
 
 
 export const fetchPromos = () => (dispatch) => {
-    dispatch(PromosLoading());
+    dispatch(promosLoading());
     
     return fetch(baseUrl + 'promotions')
         .then(response => {
@@ -91,7 +91,7 @@ export const fetchPromos = () => (dispatch) => {
         })
         .then(response => response.json())
         .then(promos => dispatch(addPromos(promos)))
-        .catch(error => dispatch(PromosFailed(error.message)))
+        .catch(error => dispatch(promosFailed(error.message)))
 }
 
 export const promosLoading = () => ({
@@ -110,7 +110,7 @@ export const addPromos = (promos) => ({
 
 
 export const fetchLeaders = () => (dispatch) => {
-    dispatch(LeadersLoading());
+    dispatch(leadersLoading());
     
     return fetch(baseUrl + 'leaders')
         .then(response => {
@@ -129,14 +129,14 @@ export const fetchLeaders = () => (dispatch) => {
         })
         .then(response => response.json())
         .then(leaders => dispatch(addLeaders(leaders)))
-        .catch(error => dispatch(LeadersFailed(error.message)))
+        .catch(error => dispatch(leadersFailed(error.message)))
 }
 
-export const LeadersLoading = () => ({
+export const leadersLoading = () => ({
     type: ActionTypes.LEADERS_LOADING
 });
 
-export const LeadersFailed = (errmess)  => ({
+export const leadersFailed = (errmess)  => ({
     type: ActionTypes.LEADERS_FAILED,
     payload: errmess
 });
