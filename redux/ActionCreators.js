@@ -157,6 +157,11 @@ export const addFavourite = (dishId) => ({
     payload: dishId
 });
 
+export const deleteFavourite = (dishId) => ({
+    type: ActionTypes.DELETE_FAVOURITE,
+    payload: dishId
+})
+
 export const postComment = (dishId,author,rating,comment)  => (dispatch) => {
 
     setTimeout(() => {
