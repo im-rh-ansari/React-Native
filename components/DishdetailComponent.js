@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, ScrollView, FlatList, Modal, Button, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, FlatList, Modal, Button, StyleSheet, Alert, PanResponder } from 'react-native';
 import { Card, Icon } from 'react-native-elements';
 import { Rating, Input } from 'react-native-elements';
 import { connect } from 'react-redux';
@@ -24,9 +24,43 @@ mapDispatchToProps = dispatch => ({
 function RenderDish(props) {
     const dish = props.dish;
 
+    const recognizeDrag = ({moveX, moveY, dx, dy }) => {
+        if(dx < -200 ) 
+            return true;
+        else
+            return false;
+    };
+
+    const panResponder = PanResponder.create({
+        onStartShouldSetPanResponder: (e, gestureState) => {
+            return true;
+        },
+        onPanResponderEnd: (e, gestureState) => {
+            if (recognizeDrag(gestureState))
+                Alert.alert(
+                    'Add To Favourite',
+                    'Are you sure you wish to add '+ dish.name + ' to favourites',
+                    [
+                        {
+                            text: 'Cancel',
+                            onPress: () => console.log('Cancel Pressed'),
+                            style: 'cancel'
+                        },
+                        {
+                            text: 'OK',
+                            onPress: () => props.favourite ? console.log('AlreadyFavourite') : props.onPress()
+                        }
+                    ],
+                    { cancelable: false }
+                )
+            return true;
+        }
+    });
+
     if(dish != null) {
         return(
-            <Animatable.View animation="fadeInDown" duration={2000} delay={1000}>
+            <Animatable.View animation="fadeInDown" duration={2000} delay={1000}
+                {...panResponder.panHandlers}>
                 <Card
                     featuredTitle={dish.name}
                     image={{uri: baseUrl + dish.image}}
@@ -41,7 +75,7 @@ function RenderDish(props) {
                             name={ props.favourite ? 'heart' : 'heart-o' }
                             type='font-awesome'
                             color='#f50'
-                            onPress={() =>props.favourite ? console.log('AlreadyFavourite') : props.onPress()}
+                            onPress={() => props.favourite ? console.log('AlreadyFavourite') : props.onPress()}
                             />
                         <Icon   
                             raised
