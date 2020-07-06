@@ -2383,6 +2383,11 @@ expo-permissions@~8.1.0:
   resolved "https://registry.npm.taobao.org/expo-permissions/download/expo-permissions-8.1.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fexpo-permissions%2Fdownload%2Fexpo-permissions-8.1.0.tgz#a7f2ee91ba76ce3a467e7b10adaa9ca5201b226f"
   integrity sha1-p/Lukbp2zjpGfnsQraqcpSAbIm8=
 
+expo-secure-store@^9.0.1:
+  version "9.0.1"
+  resolved "https://registry.npm.taobao.org/expo-secure-store/download/expo-secure-store-9.0.1.tgz#e564a2d5392cd1ab883b9b6a7e261c1815d15788"
+  integrity sha1-5WSi1Tks0auIO5tqfiYcGBXRV4g=
+
 expo-sqlite@~8.1.0:
   version "8.1.0"
   resolved "https://registry.npm.taobao.org/expo-sqlite/download/expo-sqlite-8.1.0.tgz#858eb28e1143db281de8a49c99b4a953a81d0834"
