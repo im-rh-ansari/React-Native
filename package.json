@@ -8,7 +8,9 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "~37.0.3",
+    "expo": "37.0.0",
+    "expo-notifications": "^0.4.0",
+    "expo-permissions": "^9.0.1",
     "expo-secure-store": "^9.0.1",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
