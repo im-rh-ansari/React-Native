@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Razaul\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add expo-navigations
+  C:\Program Files\nodejs\node.exe C:\Users\Razaul\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add expo-image-picker
 
 PATH: 
   D:\Sem_3\SQL\SQL\dbhomeXE\bin;C:\Program Files\Python36\Scripts\;C:\Program Files\Python36\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\MinGW\bin;;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%SYSTEMROOT%\System32\OpenSSH\;C:\Users\Razaul\AppData\Local\Microsoft\WindowsApps;C:\Users\Razaul\AppData\Roaming\npm;
@@ -14,17 +14,8 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: http://registry.npm.taobao.org/expo-navigations: Not found
-      at Request.params.callback [as _callback] (C:\Users\Razaul\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66987:18)
-      at Request.self.callback (C:\Users\Razaul\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140748:22)
-      at Request.emit (events.js:315:20)
-      at Request.<anonymous> (C:\Users\Razaul\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141720:10)
-      at Request.emit (events.js:315:20)
-      at IncomingMessage.<anonymous> (C:\Users\Razaul\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141642:12)
-      at Object.onceWrapper (events.js:421:28)
-      at IncomingMessage.emit (events.js:327:22)
-      at endReadableNT (_stream_readable.js:1218:12)
-      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+  Error: connect EINVAL 47.89.113.221:80
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1142:16)
 
 npm manifest: 
   {
@@ -38,6 +29,8 @@ npm manifest:
     },
     "dependencies": {
       "expo": "37.0.0",
+      "expo-mail-composer": "^8.2.1",
+      "expo-notifications": "^0.4.0",
       "expo-permissions": "^9.0.1",
       "expo-secure-store": "^9.0.1",
       "react": "~16.9.0",
@@ -1628,7 +1621,7 @@ Lockfile:
       "@babel/plugin-transform-template-literals" "^7.0.0"
       babel-plugin-syntax-trailing-function-commas "^7.0.0-beta.0"
   
-  badgin@^1.1.2:
+  badgin@^1.1.2, badgin@^1.1.5:
     version "1.1.8"
     resolved "https://registry.npm.taobao.org/badgin/download/badgin-1.1.8.tgz#6e4c930554945d31752e5de2d8a316036dccda5e"
     integrity sha1-bkyTBVSUXTF1Ll3i2KMWA23M2l4=
@@ -2384,6 +2377,11 @@ Lockfile:
       snapdragon "^0.8.1"
       to-regex "^3.0.1"
   
+  expo-application@~2.2.1:
+    version "2.2.1"
+    resolved "https://registry.npm.taobao.org/expo-application/download/expo-application-2.2.1.tgz#f14b83ae0b07e4922850f8856a56f141c168d6d0"
+    integrity sha1-8UuDrgsH5JIoUPiFalbxQcFo1tA=
+  
   expo-asset@~8.1.0:
     version "8.1.7"
     resolved "https://registry.npm.taobao.org/expo-asset/download/expo-asset-8.1.7.tgz#32618e51f85df56f1d7dd54c71eb486ae7f7674e"
@@ -2394,6 +2392,14 @@ Lockfile:
       md5-file "^3.2.3"
       path-browserify "^1.0.0"
       url-parse "^1.4.4"
+  
+  expo-constants@9.1.1:
+    version "9.1.1"
+    resolved "https://registry.npm.taobao.org/expo-constants/download/expo-constants-9.1.1.tgz#bca141ee3d4550e308798128f66c6d9c6a206ca1"
+    integrity sha1-vKFB7j1FUOMIeYEo9mxtnGogbKE=
+    dependencies:
+      fbjs "1.0.0"
+      uuid "^3.3.2"
   
   expo-constants@~9.0.0:
     version "9.0.0"
@@ -2436,6 +2442,23 @@ Lockfile:
     integrity sha1-anGtmot41fAWowoCATw7KPRtCxs=
     dependencies:
       invariant "^2.2.4"
+  
+  expo-mail-composer@^8.2.1:
+    version "8.2.1"
+    resolved "https://registry.npm.taobao.org/expo-mail-composer/download/expo-mail-composer-8.2.1.tgz#26168b747606a9531801f1322b1690aa22bfe7db"
+    integrity sha1-JhaLdHYGqVMYAfEyKxaQqiK/59s=
+    dependencies:
+      query-string "^6.2.0"
+  
+  expo-notifications@^0.4.0:
+    version "0.4.0"
+    resolved "https://registry.npm.taobao.org/expo-notifications/download/expo-notifications-0.4.0.tgz#32e2949ebad528463932f53c8983ab07e8c7ae4d"
+    integrity sha1-MuKUnrrVKEY5MvU8iYOrB+jHrk0=
+    dependencies:
+      badgin "^1.1.5"
+      expo-application "~2.2.1"
+      expo-constants "9.1.1"
+      uuid "^3.4.0"
   
   expo-permissions@^9.0.1:
     version "9.0.1"
@@ -4401,6 +4424,15 @@ Lockfile:
     resolved "https://registry.npm.taobao.org/qs/download/qs-6.9.4.tgz#9090b290d1f91728d3c22e54843ca44aea5ab687"
     integrity sha1-kJCykNH5FyjTwi5UhDykSupatoc=
   
+  query-string@^6.2.0:
+    version "6.13.1"
+    resolved "https://registry.npm.taobao.org/query-string/download/query-string-6.13.1.tgz?cache=0&sync_timestamp=1591853430991&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fquery-string%2Fdownload%2Fquery-string-6.13.1.tgz#d913ccfce3b4b3a713989fe6d39466d92e71ccad"
+    integrity sha1-2RPM/OO0s6cTmJ/m05Rm2S5xzK0=
+    dependencies:
+      decode-uri-component "^0.2.0"
+      split-on-first "^1.0.0"
+      strict-uri-encode "^2.0.0"
+  
   querystringify@^2.1.1:
     version "2.1.1"
     resolved "https://registry.npm.taobao.org/querystringify/download/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
@@ -5174,6 +5206,11 @@ Lockfile:
     resolved "https://registry.npm.taobao.org/spdx-license-ids/download/spdx-license-ids-3.0.5.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fspdx-license-ids%2Fdownload%2Fspdx-license-ids-3.0.5.tgz#3694b5804567a458d3c8045842a6358632f62654"
     integrity sha1-NpS1gEVnpFjTyARYQqY1hjL2JlQ=
   
+  split-on-first@^1.0.0:
+    version "1.1.0"
+    resolved "https://registry.npm.taobao.org/split-on-first/download/split-on-first-1.1.0.tgz#f610afeee3b12bce1d0c30425e76398b78249a5f"
+    integrity sha1-9hCv7uOxK84dDDBCXnY5i3gkml8=
+  
   split-string@^3.0.1, split-string@^3.0.2:
     version "3.1.0"
     resolved "https://registry.npm.taobao.org/split-string/download/split-string-3.1.0.tgz#7cb09dda3a86585705c64b39a6466038682e8fe2"
@@ -5215,6 +5252,11 @@ Lockfile:
     version "2.2.0"
     resolved "https://registry.npm.taobao.org/stream-buffers/download/stream-buffers-2.2.0.tgz#91d5f5130d1cef96dcfa7f726945188741d09ee4"
     integrity sha1-kdX1Ew0c75bc+n9yaUUYh0HQnuQ=
+  
+  strict-uri-encode@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.npm.taobao.org/strict-uri-encode/download/strict-uri-encode-2.0.0.tgz#b9c7330c7042862f6b142dc274bbcc5866ce3546"
+    integrity sha1-ucczDHBChi9rFC3CdLvMWGbONUY=
   
   string-width@^1.0.1:
     version "1.0.2"
