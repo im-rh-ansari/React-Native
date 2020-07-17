@@ -2321,7 +2321,7 @@ expo-application@~2.2.1:
   resolved "https://registry.npm.taobao.org/expo-application/download/expo-application-2.2.1.tgz#f14b83ae0b07e4922850f8856a56f141c168d6d0"
   integrity sha1-8UuDrgsH5JIoUPiFalbxQcFo1tA=
 
-expo-asset@~8.1.0:
+expo-asset@^8.1.7, expo-asset@~8.1.0:
   version "8.1.7"
   resolved "https://registry.npm.taobao.org/expo-asset/download/expo-asset-8.1.7.tgz#32618e51f85df56f1d7dd54c71eb486ae7f7674e"
   integrity sha1-MmGOUfhd9W8dfdVMcetIauf3Z04=
@@ -2364,6 +2364,11 @@ expo-font@~8.1.0:
   dependencies:
     fbjs "1.0.0"
     fontfaceobserver "^2.1.0"
+
+expo-image-manipulator@^8.2.1:
+  version "8.2.1"
+  resolved "https://registry.npm.taobao.org/expo-image-manipulator/download/expo-image-manipulator-8.2.1.tgz#8b9c9dc40615f045d49b3a3d53e41e3dbede1777"
+  integrity sha1-i5ydxAYV8EXUmzo9U+QePb7eF3c=
 
 expo-image-picker@^8.3.0:
   version "8.3.0"

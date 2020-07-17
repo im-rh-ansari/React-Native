@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Razaul\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add expo-image-picker
+  C:\Program Files\nodejs\node.exe C:\Users\Razaul\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add expo-assets
 
 PATH: 
   D:\Sem_3\SQL\SQL\dbhomeXE\bin;C:\Program Files\Python36\Scripts\;C:\Program Files\Python36\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\MinGW\bin;;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%SYSTEMROOT%\System32\OpenSSH\;C:\Users\Razaul\AppData\Local\Microsoft\WindowsApps;C:\Users\Razaul\AppData\Roaming\npm;
@@ -14,8 +14,17 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: connect EINVAL 47.89.113.221:80
-      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1142:16)
+  Error: http://registry.npm.taobao.org/expo-assets: Not found
+      at Request.params.callback [as _callback] (C:\Users\Razaul\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66987:18)
+      at Request.self.callback (C:\Users\Razaul\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140748:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (C:\Users\Razaul\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141720:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (C:\Users\Razaul\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141642:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (_stream_readable.js:1218:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
 
 npm manifest: 
   {
@@ -29,6 +38,8 @@ npm manifest:
     },
     "dependencies": {
       "expo": "37.0.0",
+      "expo-image-manipulator": "^8.2.1",
+      "expo-image-picker": "^8.3.0",
       "expo-mail-composer": "^8.2.1",
       "expo-notifications": "^0.4.0",
       "expo-permissions": "^9.0.1",
@@ -2426,6 +2437,19 @@ Lockfile:
       fbjs "1.0.0"
       fontfaceobserver "^2.1.0"
   
+  expo-image-manipulator@^8.2.1:
+    version "8.2.1"
+    resolved "https://registry.npm.taobao.org/expo-image-manipulator/download/expo-image-manipulator-8.2.1.tgz#8b9c9dc40615f045d49b3a3d53e41e3dbede1777"
+    integrity sha1-i5ydxAYV8EXUmzo9U+QePb7eF3c=
+  
+  expo-image-picker@^8.3.0:
+    version "8.3.0"
+    resolved "https://registry.npm.taobao.org/expo-image-picker/download/expo-image-picker-8.3.0.tgz#5a9daacbc1afa7fdbfd31edb22818524ad0b85e2"
+    integrity sha1-Wp2qy8Gvp/2/0x7bIoGFJK0LheI=
+    dependencies:
+      expo-permissions "~9.0.1"
+      uuid "7.0.2"
+  
   expo-keep-awake@~8.1.0:
     version "8.1.0"
     resolved "https://registry.npm.taobao.org/expo-keep-awake/download/expo-keep-awake-8.1.0.tgz#3a1d8aa5a8395d40c7d79e1c93020ae5f848e664"
@@ -2460,7 +2484,7 @@ Lockfile:
       expo-constants "9.1.1"
       uuid "^3.4.0"
   
-  expo-permissions@^9.0.1:
+  expo-permissions@^9.0.1, expo-permissions@~9.0.1:
     version "9.0.1"
     resolved "https://registry.npm.taobao.org/expo-permissions/download/expo-permissions-9.0.1.tgz#dc10b58654bbe39bbbed5827369942b01b08055e"
     integrity sha1-3BC1hlS745u77VgnNplCsBsIBV4=
@@ -5598,6 +5622,11 @@ Lockfile:
     version "1.0.1"
     resolved "https://registry.npm.taobao.org/utils-merge/download/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
     integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
+  
+  uuid@7.0.2:
+    version "7.0.2"
+    resolved "https://registry.npm.taobao.org/uuid/download/uuid-7.0.2.tgz?cache=0&sync_timestamp=1592944295801&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fuuid%2Fdownload%2Fuuid-7.0.2.tgz#7ff5c203467e91f5e0d85cfcbaaf7d2ebbca9be6"
+    integrity sha1-f/XCA0Z+kfXg2Fz8uq99LrvKm+Y=
   
   uuid@^3.3.2, uuid@^3.4.0:
     version "3.4.0"
