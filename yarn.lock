@@ -2337,6 +2337,11 @@ expo-asset@^8.1.7, expo-asset@~8.1.0:
     path-browserify "^1.0.0"
     url-parse "^1.4.4"
 
+expo-calendar@^8.2.1:
+  version "8.2.1"
+  resolved "https://registry.npm.taobao.org/expo-calendar/download/expo-calendar-8.2.1.tgz#79aa2be342dc2fea73e6f0a14200a789f05d9ae1"
+  integrity sha1-eaor40LcL+pz5vChQgCnifBdmuE=
+
 expo-constants@9.1.1:
   version "9.1.1"
   resolved "https://registry.npm.taobao.org/expo-constants/download/expo-constants-9.1.1.tgz#bca141ee3d4550e308798128f66c6d9c6a206ca1"
